@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title> Transparent Login Form Design </title>
+    <link rel="stylesheet" type="text/css" href="style_login.css">   
+</head>
+    <body>
+    <div class="login-box">
+        <h1>Login Here</h1>
+            <form action="thepunjabiwriteups_main.html" name="myForm2">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="button" name="submit" id="loginbtn" value="Login" onclick="vaidation2()">
+            <a href="#">Forgot Password</a>    
+            </form>
+        
+        
+        </div>
+    <script type="text/javascript">
+        function vaidation2(){
+    var pass=document.forms["myForm2"]["password"].value;
+    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    var name=document.forms["myForm2"]["username"].value;
+    if(name==""){
+        alert("Username cannot be left empty");
+    }
+    else if(pass==""){
+        alert("Password cannot be left empty");
+    }
+    else if(!pass.match(passw)){
+        alert("Password shuould be atleast 6 character long and must contain an uppercase, lowecase and a digit");
+    }
+    else{
+        window.open("thepunjabiwriteups_main.html");
+    }
+}
+    </script>
+    </body>
+</html>
